@@ -30,4 +30,4 @@ Administrators oversee the platform's operations and ensure a smooth experience 
 
 - **Aashika Jain** - Feature thinking + MVP Defination
 - **Abhishek Joy** - Wireframes + Workflow Diagram
-- **Agampreet Singh** - Frontend + Firebase Integration
+- **Agampreet Singh** - Code & Database Architecture
