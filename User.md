@@ -1,98 +1,222 @@
-# User Roles, Permissions, and Authorization
+# Contributor Details
 
-This document defines the comprehensive user ecosystem within our Gamified Learning Platform. It breaks down granular roles, specific permissions, and provides a clear authorization matrix for platform governance.
+## Name
 
----
+Aashika Jain
+## Email
 
-## 1. Granular Role Specifications
-
-### 🧑‍🎓 Student (Learner)
-The primary consumer of the platform, focused on upskilling through gamified learning.
-- **Core Focus**: Consuming content, completing challenges, climbing the leaderboard, and earning badges.
-- **Data Ownership**: Owns their personal profile, enrollment history, and payment ledger. Can only view public data of other users (like Leaderboard stats).
-
-### 👨‍🏫 Mentor (Instructor/Creator)
-Industry professionals and educators who create and moderate content.
-- **Core Focus**: Creating courses, reviewing student submissions, hosting Q&A sessions, and answering doubts.
-- **Data Ownership**: Owns the courses they create. Can view progress data *only* for students enrolled in their specific courses.
-
-### 🛡️ Administrator (Moderator)
-Platform managers responsible for maintaining content quality and handling disputes.
-- **Core Focus**: Reviewing reported content (spam/abuse), processing refund requests, and managing community health.
-- **Data Ownership**: Can view and edit all courses, process transactions, and moderate users, but cannot alter core gamification algorithms or system settings.
-
-### 👑 Super Admin
-The platform owners and system architects.
-- **Core Focus**: Global platform configuration, financial auditing, API management, and role assignment.
-- **Data Ownership**: Full unrestricted CRUD (Create, Read, Update, Delete) access to all database collections, including destructive actions.
+aashikajain1310@gmail.com
 
 ---
 
-## 2. Permissions Specification
+# Contribution Summary
 
-Permissions are mapped to specific database resources and platform actions.
-
-| Resource | Action | Description |
-| :--- | :--- | :--- |
-| **Profile** | `profile:read` | View a user's public profile and badges. |
-| | `profile:update:own` | Edit own profile details. |
-| | `profile:delete:own` | Delete own account (GDPR compliance). |
-| **Course** | `course:read` | View course details and syllabus. |
-| | `course:create` | Create a new course draft. |
-| | `course:update:own`| Edit a course authored by the user. |
-| | `course:delete:own`| Unpublish a course authored by the user. |
-| | `course:moderate` | Force-unpublish or edit any course violating guidelines. |
-| **Enrollment**| `enroll:create` | Enroll in a course (often requires payment success). |
-| | `enroll:read:own` | View own course progress. |
-| | `enroll:read:org` | View progress of students in a specific mentor's course. |
-| **Payments** | `payment:create` | Initiate a checkout session. |
-| | `payment:read:own` | View own transaction history. |
-| | `refund:request` | Submit a refund request. |
-| | `refund:process` | Approve or reject a refund request. |
-| **Admin** | `role:assign` | Promote or demote users (e.g., Student -> Mentor). |
-| | `system:config` | Change global variables (e.g., XP multipliers). |
+During the activity, I was responsible for defining the **Minimum Viable Product (MVP)** of the Gamified Learning Platform.
 
 ---
 
-## 3. Authorization Matrix
+# My Contributions
 
-This matrix defines exactly which roles have access to which permissions. 
-*(Key: ✅ = Allowed, ❌ = Denied, 👤 = Allowed only on own/owned resources)*
+* Identified the essential features required for the first version of the platform.
+* Defined the scope of the Minimum Viable Product (MVP).
+* Analyzed user requirements and learning objectives.
+* Determined the core functionalities necessary for student engagement and learning progression.
+* Documented the MVP features for learners:
 
-| Permission Category | Action | Student | Mentor | Admin | Super Admin |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| **Users & Profiles** | Read Public Profile | ✅ | ✅ | ✅ | ✅ |
-| | Update Profile | 👤 | 👤 | ✅ | ✅ |
-| | Delete Account | 👤 | 👤 | ❌ | ✅ |
-| **Courses** | Read Course | ✅ | ✅ | ✅ | ✅ |
-| | Create Course | ❌ | ✅ | ✅ | ✅ |
-| | Update Course | ❌ | 👤 | ✅ | ✅ |
-| | Delete Course | ❌ | 👤 | ✅ | ✅ |
-| **Enrollments & Learning**| Enroll in Course | ✅ | ❌ | ❌ | ✅ |
-| | View Progress | 👤 | 👤 | ✅ | ✅ |
-| | Grade/Review Submissions| ❌ | 👤 | ✅ | ✅ |
-| **Payments & Refunds** | Make Payment | ✅ | ❌ | ❌ | ✅ |
-| | View Ledger | 👤 | 👤 | ✅ | ✅ |
-| | Request Refund | 👤 | ❌ | ❌ | ❌ |
-| | Process Refund | ❌ | ❌ | ✅ | ✅ |
-| **System Administration** | Assign Roles | ❌ | ❌ | ❌ | ✅ |
-| | Configure Global XP Rules| ❌ | ❌ | ❌ | ✅ |
+  * User Registration and Login
+  * Course Enrollment
+  * Lesson Access
+  * Progress Tracking
+  * Quiz Participation
+  * XP (Experience Points) System
+  * Achievement Badges
+  * Leaderboard Access
+  * User Dashboard
+* Defined administrator functionalities:
+
+  * Course Management
+  * Lesson Management
+  * Quiz Management
+  * User Monitoring
+* Identified and documented features excluded from the MVP to maintain a focused and achievable scope.
+* Contributed to requirement analysis and product planning discussions.
+* Helped establish a clear roadmap for the platform's initial release.
 
 ---
 
-## Team Contributions
+# Distributed Tasks
 
-- **Aashika Jain**
-Spearheaded feature ideation and defined the core gamified learning loop.
-Scoped the Minimum Viable Product (MVP) to ensure focused, rapid delivery.
-Drafted the long-term product vision and advanced feature roadmap.
+* MVP Feature Planning
+* Requirement Analysis
+* Scope Definition
+* Learning Feature Identification
+* Gamification Feature Planning
+* User Engagement Strategy
+* Included and Excluded Feature Documentation
+* Product Requirement Documentation
+* Project Documentation Support
 
-- **Abhishek Joy**
-Designed the overarching user experience and created the platform wireframes.
-Mapped out the complete user workflow, from course enrollment to leaderboard progression.
-Established the minimalist, premium design system and micro-interaction guidelines.
+---
 
-- **Agampreet Singh**
-Engineered the frontend using Next.js, React, and Tailwind CSS for a highly responsive UI.
-Architected the comprehensive Firebase Firestore NoSQL database schema for scalable data tracking.
-Integrated Firebase Authentication, built out the core page layouts, and deployed the platform.
+# Value Added
+
+* Helped maintain a realistic and achievable development scope.
+* Ensured the platform focuses on its primary objective of improving learning engagement through gamification.
+* Defined a strong foundation for future platform enhancements.
+* Assisted in aligning product features with user needs and project goals.
+* Contributed towards creating a structured and scalable product vision.
+
+---
+
+# Summary
+
+My contribution focused on defining the MVP scope of the Gamified Learning Platform, identifying the minimum set of features required to deliver an engaging learning experience, documenting included and excluded functionalities, and ensuring the project remains focused on its core objective of enhancing learning through gamification while maintaining a practical and achievable first release.
+
+
+# Contributor Details
+
+## Name
+
+Abhishek Joy
+
+## Email
+
+[abhishekjoygkp@gmail.com](mailto:abhishekjoygkp@gmail.com)
+
+---
+
+# Contribution Summary
+
+During the activity, I was responsible for designing the workflow diagrams of the Gamified Learning Platform.
+
+---
+
+# Role & Responsibilities
+
+## 🔹 Technical Contributions
+
+* Designed the complete workflow of the Gamified Learning Platform.
+* Created the end-to-end user journey from registration to course completion.
+* Structured the learning flow to ensure a smooth and engaging user experience.
+* Developed workflow diagrams for:
+
+  * User Registration and Login
+  * Course Enrollment
+  * Lesson Access
+  * Quiz Participation
+  * XP Reward Distribution
+  * Badge Unlocking
+  * Leaderboard Updates
+* Mapped user interactions between learners, administrators, and the system.
+* Planned the progression flow from beginner users to active learners.
+* Ensured logical navigation between different platform modules.
+* Contributed to system flow planning and feature integration discussions.
+
+---
+
+## 🔹 Non-Technical Contributions
+
+* Assisted in project discussions and workflow planning.
+* Contributed to documentation and activity coordination.
+
+---
+
+# 🔹 Distributed Tasks
+
+* Workflow Design
+* User Journey Mapping
+* System Flow Planning
+* Process Visualization
+* Navigation Flow Structuring
+* Learning Progress Flow Design
+* Documentation Support
+
+---
+
+# 🔹 Value Added
+
+* Helped create a clear and structured platform workflow.
+* Ensured smooth interaction between users and platform features.
+* Improved understanding of system operations through visual representations.
+* Contributed to building an organized and scalable platform structure.
+
+---
+
+# Summary
+
+My contribution focused on designing and documenting the workflow diagrams of the Gamified Learning Platform, ensuring a logical user journey, smooth navigation, and effective interaction between learning and gamification features.
+# Contributor Details
+
+## Name
+
+Agampreet Singh
+
+## Email
+
+[asingh11_be23@thapar.edu](mailto:asingh11_be23@thapar.edu)
+
+---
+
+# Contribution Summary
+
+During the activity, I was responsible for creating the wireframes of the Gamified Learning Platform.
+
+---
+
+# Role & Responsibilities
+
+## 🔹 Technical Contributions
+
+* Designed low-fidelity wireframes for the Gamified Learning Platform.
+* Planned the overall user interface structure and screen layouts.
+* Created wireframes for:
+
+  * Landing Page
+  * Login and Registration Page
+  * Student Dashboard
+  * Course Listing Page
+  * Course Details Page
+  * Quiz Interface
+  * Achievement & Badge Page
+  * Leaderboard Screen
+  * User Profile Page
+  * Admin Dashboard
+* Structured navigation between screens to ensure usability and consistency.
+* Planned layout placement for gamification elements such as XP points, badges, progress indicators, and rankings.
+* Contributed to user experience design and interface organization.
+* Assisted in feature visualization and screen planning.
+
+---
+
+## 🔹 Non-Technical Contributions
+
+* Participated in design discussions and documentation activities.
+* Supported feature planning and usability reviews.
+
+---
+
+# 🔹 Distributed Tasks
+
+* Wireframe Design
+* UI Structure Planning
+* Screen Layout Design
+* User Experience Planning
+* Navigation Design
+* Dashboard Layout Planning
+* Feature Visualization
+* Documentation Support
+
+---
+
+# 🔹 Value Added
+
+* Helped create a user-friendly and visually organized interface structure.
+* Ensured intuitive navigation across platform modules.
+* Improved usability through structured screen layouts.
+* Contributed to establishing a scalable UI foundation for future development.
+
+---
+
+# Summary
+
+My contribution focused on designing wireframes for the Gamified Learning Platform, creating structured screen layouts, planning navigation flows, and ensuring an intuitive user experience that supports both learning and gamification objectives.
