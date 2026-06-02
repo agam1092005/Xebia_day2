@@ -29,30 +29,99 @@ Built with a modern and scalable tech stack:
 
 ---
 
+## Platform Flow
+
+```mermaid
+graph TD
+    A[Landing Page] -->|Browse| B(View Course Details)
+    A -->|Sign Up / Login| C{User Account}
+    B -->|Click Enroll| C
+    
+    C -->|Complete Payment| D[Active Enrollment]
+    D -->|Learn & Complete Modules| E[Earn XP & Badges]
+    
+    E --> F(Profile Updated)
+    E --> G(Climb Leaderboard)
+    
+    C -->|Manage| H[Payment / Refund Processing]
+```
+
+---
+
 ## Database Architecture (Firebase Firestore)
 
-The platform utilizes a NoSQL document database schema optimized for fast queries and real-time gamification tracking.
+The platform utilizes a comprehensive NoSQL document database schema designed for scale, supporting everything from real-time gamification tracking to financial transactions and mentor-student relationships.
 
-### `users` Collection
-Stores user profiles and gamification statistics.
+### `users` (Collection)
+Stores comprehensive profiles for both Students and Mentors.
 - `uid` (String) - Firebase Auth User ID
 - `email` (String) - User's email address
-- `xp` (Number) - Total experience points earned
-- `rank` (Number) - Global leaderboard position
-- `badges` (Array<String>) - List of unlocked badge IDs
+- `role` (String) - `"student"` | `"mentor"` | `"admin"`
+- `profile` (Map) - `firstName`, `lastName`, `avatarUrl`, `bio`, `githubLink`
+- `stats` (Map) - `totalXP`, `globalRank`, `currentStreak`
+- `createdAt` (Timestamp) - Account creation date
+- `lastActive` (Timestamp) - Last login timestamp
 
-### `courses` Collection
-Stores metadata for available learning modules.
-- `courseId` (String) - Unique slug for the course (e.g. `frontend-mastery`)
+### `badges` (Collection)
+Master registry of all available gamification badges.
+- `badgeId` (String) - Unique identifier (e.g., `first-login`)
+- `name` (String) - Display name (e.g., "React Beginner")
+- `description` (String) - Criteria to unlock
+- `iconUrl` (String) - Path to badge image
+- `xpReward` (Number) - XP awarded upon unlocking
+
+### `user_badges` (Subcollection under `users`)
+Tracks badges unlocked by specific users.
+- `badgeId` (String) - Reference to `badges` collection
+- `earnedAt` (Timestamp) - When the badge was unlocked
+
+### `courses` (Collection)
+Stores metadata for available learning modules and paths.
+- `courseId` (String) - Unique slug (e.g., `frontend-mastery`)
 - `title` (String) - Display name of the course
-- `jd` (String) - Detailed description and syllabus
+- `description` (String) - Detailed syllabus
+- `price` (Number) - Cost of the course
+- `mentorId` (String) - Reference to the creator/mentor `uid`
+- `enrolledCount` (Number) - Total active students
+- `rating` (Number) - Average student rating (0-5)
 
-### `transactions` Collection
-Logs user course enrollments and activities.
-- `userId` (String) - Reference to the user's `uid`
-- `courseId` (String) - Reference to the enrolled course
-- `amount` (Number) - Price or XP cost
-- `timestamp` (Timestamp) - Time of enrollment
+### `enrollments` (Collection)
+Maps students to courses, tracking individual progress.
+- `enrollmentId` (String) - Unique ID
+- `studentId` (String) - Reference to student `uid`
+- `courseId` (String) - Reference to course `courseId`
+- `progressPercentage` (Number) - 0 to 100
+- `status` (String) - `"active"` | `"completed"` | `"refunded"`
+- `enrolledAt` (Timestamp)
+
+### `payments` (Collection)
+Immutable ledger of all financial transactions.
+- `paymentId` (String) - Unique transaction ID
+- `userId` (String) - Student who made the purchase
+- `courseId` (String) - Course purchased
+- `amount` (Number) - Transaction amount
+- `currency` (String) - e.g., `"USD"`, `"INR"`
+- `status` (String) - `"success"` | `"pending"` | `"failed"`
+- `paymentMethod` (String) - e.g., `"stripe"`, `"razorpay"`
+- `timestamp` (Timestamp)
+
+### `refunds` (Collection)
+Handles course refund requests and processing.
+- `refundId` (String) - Unique refund ID
+- `paymentId` (String) - Reference to original `paymentId`
+- `userId` (String) - Student requesting refund
+- `reason` (String) - Explanation for refund
+- `amount` (Number) - Amount to be refunded
+- `status` (String) - `"requested"` | `"approved"` | `"rejected"`
+- `processedAt` (Timestamp) - When the refund was finalized
+
+### `leaderboards` (Collection)
+Historical snapshots for weekly and monthly rankings to ensure fast queries without recalculating all XP.
+- `periodId` (String) - e.g., `"2024-W12"` (Week 12 of 2024)
+- `userId` (String) - Reference to user `uid`
+- `xpEarned` (Number) - XP earned in this specific period
+- `rank` (Number) - Position on the leaderboard
+- `tier` (String) - `"bronze"` | `"silver"` | `"gold"` | `"diamond"`
 
 ---
 
