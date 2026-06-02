@@ -82,6 +82,17 @@ This matrix defines exactly which roles have access to which permissions.
 
 ## Team Contributions
 
-- **Aashika Jain** - Feature thinking + MVP Definition
-- **Abhishek Joy** - Wireframes + Workflow Diagram
-- **Agampreet Singh** - Code & Database Architecture
+- **Aashika Jain**
+Spearheaded feature ideation and defined the core gamified learning loop.
+Scoped the Minimum Viable Product (MVP) to ensure focused, rapid delivery.
+Drafted the long-term product vision and advanced feature roadmap.
+
+- **Abhishek Joy**
+Designed the overarching user experience and created the platform wireframes.
+Mapped out the complete user workflow, from course enrollment to leaderboard progression.
+Established the minimalist, premium design system and micro-interaction guidelines.
+
+- **Agampreet Singh**
+Engineered the frontend using Next.js, React, and Tailwind CSS for a highly responsive UI.
+Architected the comprehensive Firebase Firestore NoSQL database schema for scalable data tracking.
+Integrated Firebase Authentication, built out the core page layouts, and deployed the platform.
