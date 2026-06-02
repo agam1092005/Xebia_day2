@@ -1,0 +1,167 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.pg{width:100%;border:1px solid var(--color-border-primary);border-radius:var(--border-radius-lg);overflow:hidden;font-family:var(--font-sans)}
+.sec-tag{font-size:9px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--color-text-tertiary);border:1px dashed var(--color-border-secondary);border-radius:3px;padding:1px 6px;display:inline-block;margin-bottom:10px}
+.bar{height:9px;border-radius:3px;background:var(--color-border-tertiary)}
+.bar.dk{background:#333}
+.bar.mid{background:var(--color-border-secondary)}
+.chevron{width:11px;height:11px;border-right:1.5px solid var(--color-border-primary);border-top:1.5px solid var(--color-border-primary);transform:rotate(45deg);flex-shrink:0}
+</style>
+
+<div class="pg">
+
+  <div style="background:var(--color-background-secondary);padding:11px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:0.5px solid var(--color-border-tertiary)">
+    <div class="bar" style="width:68px;height:12px;border-radius:3px"></div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="bar" style="width:42px"></div>
+      <div class="bar" style="width:52px"></div>
+      <div class="bar" style="width:38px"></div>
+    </div>
+    <div style="border:1px solid var(--color-border-primary);border-radius:var(--border-radius-md);padding:4px 14px;font-size:11px;color:var(--color-text-secondary)">Login</div>
+  </div>
+
+  <div style="background:var(--color-background-primary);padding:36px 32px 32px;text-align:center;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;pointer-events:none">
+      <div style="position:absolute;top:12%;left:18%;width:22px;height:3px;background:var(--color-border-tertiary);border-radius:2px;transform:rotate(-50deg)"></div>
+      <div style="position:absolute;top:6%;left:49%;width:3px;height:22px;background:var(--color-border-tertiary);border-radius:2px"></div>
+      <div style="position:absolute;top:20%;right:9%;width:22px;height:3px;background:var(--color-border-tertiary);border-radius:2px;transform:rotate(30deg)"></div>
+      <div style="position:absolute;bottom:18%;left:10%;width:26px;height:3px;background:var(--color-border-tertiary);border-radius:2px;transform:rotate(-25deg)"></div>
+      <div style="position:absolute;bottom:22%;left:22%;width:22px;height:3px;background:var(--color-border-tertiary);border-radius:2px;transform:rotate(20deg)"></div>
+      <div style="position:absolute;bottom:10%;right:18%;width:24px;height:3px;background:var(--color-border-tertiary);border-radius:2px;transform:rotate(50deg)"></div>
+      <div style="position:absolute;bottom:28%;right:25%;width:22px;height:3px;background:var(--color-border-tertiary);border-radius:2px;transform:rotate(-40deg)"></div>
+      <div style="position:absolute;top:38%;right:20%;width:22px;height:3px;background:var(--color-border-tertiary);border-radius:2px;transform:rotate(35deg)"></div>
+    </div>
+    <div style="position:relative">
+      <div class="sec-tag">section 1 — hero</div>
+      <div style="font-size:22px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;letter-spacing:-.3px">Code. Level Up. Conquer.</div>
+      <div class="bar" style="width:320px;margin:8px auto 5px"></div>
+      <div class="bar" style="width:240px;margin:0 auto 22px"></div>
+      <div style="display:flex;justify-content:center;gap:12px">
+        <div style="width:188px;border:1px solid var(--color-border-primary);border-radius:var(--border-radius-lg);padding:11px 13px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+            <div style="font-size:12px;font-weight:500;color:var(--color-text-primary)">Start Your Journey</div>
+            <div class="chevron"></div>
+          </div>
+          <div class="bar" style="width:130px;height:8px"></div>
+          <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:5px;font-style:italic">↓ scrolls to courses</div>
+        </div>
+        <div style="width:188px;border:1px solid var(--color-border-primary);border-radius:var(--border-radius-lg);padding:11px 13px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+            <div style="font-size:12px;font-weight:500;color:var(--color-text-primary)">Leaderboard</div>
+            <div class="chevron"></div>
+          </div>
+          <div class="bar" style="width:110px;height:8px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#1c1c1c;padding:28px 32px">
+    <div class="sec-tag" style="border-color:#3a3a3a;color:#666">section 2 — features (dark bg)</div>
+    <div style="font-size:14px;font-weight:500;color:#e0e0e0;text-align:center;margin-bottom:6px">What Makes Us Different?</div>
+    <div class="bar dk" style="width:280px;margin:0 auto 4px"></div>
+    <div class="bar dk" style="width:200px;margin:0 auto 20px"></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      <div style="border:1px solid #2e2e2e;border-radius:var(--border-radius-lg);padding:14px">
+        <div style="font-size:11px;font-weight:500;color:#ccc;margin-bottom:8px">Earn XP and Badges</div>
+        <div class="bar dk" style="margin-bottom:4px"></div>
+        <div class="bar dk" style="width:80%"></div>
+      </div>
+      <div style="border:1px solid #2e2e2e;border-radius:var(--border-radius-lg);padding:14px">
+        <div style="font-size:11px;font-weight:500;color:#ccc;margin-bottom:8px">Climb the Leaderboard</div>
+        <div class="bar dk" style="margin-bottom:4px"></div>
+        <div class="bar dk" style="width:75%"></div>
+      </div>
+      <div style="border:1px solid #2e2e2e;border-radius:var(--border-radius-lg);padding:14px">
+        <div style="font-size:11px;font-weight:500;color:#ccc;margin-bottom:8px">Unlock Real-World Projects</div>
+        <div class="bar dk" style="margin-bottom:4px"></div>
+        <div class="bar dk" style="width:85%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#181818;padding:24px 32px;border-top:1px solid #222">
+    <div class="sec-tag" style="border-color:#333;color:#555">section 3 — social proof (dark bg)</div>
+    <div style="display:flex;gap:20px;align-items:flex-start">
+      <div style="width:200px;border:1px solid #2a2a2a;border-radius:var(--border-radius-lg);padding:14px;flex-shrink:0">
+        <div class="bar dk" style="margin-bottom:5px"></div>
+        <div class="bar dk" style="margin-bottom:5px"></div>
+        <div class="bar dk" style="width:70%;margin-bottom:12px"></div>
+        <div style="width:80px;height:8px;background:#2a4a35;border-radius:2px;margin-bottom:3px"></div>
+        <div class="bar dk" style="width:110px;height:7px"></div>
+      </div>
+      <div style="flex:1">
+        <div style="font-size:11px;color:#666;margin-bottom:12px;font-weight:500">Our top learners work at</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="border:1px solid #2a2a2a;border-radius:var(--border-radius-md);height:36px;display:flex;align-items:center;justify-content:center"><div class="bar dk" style="width:52px"></div></div>
+          <div style="border:1px solid #2a2a2a;border-radius:var(--border-radius-md);height:36px;display:flex;align-items:center;justify-content:center"><div class="bar dk" style="width:64px"></div></div>
+          <div style="border:1px solid #2a2a2a;border-radius:var(--border-radius-md);height:36px;display:flex;align-items:center;justify-content:center"><div class="bar dk" style="width:44px"></div></div>
+          <div style="border:1px solid #2a2a2a;border-radius:var(--border-radius-md);height:36px;display:flex;align-items:center;justify-content:center"><div class="bar dk" style="width:58px"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--color-background-primary);padding:28px 32px" id="courses-anchor">
+    <div class="sec-tag">section 4 — available courses <span style="color:var(--color-text-success);font-style:italic">(scroll target)</span></div>
+    <div style="font-size:14px;font-weight:500;color:var(--color-text-primary);text-align:center;margin-bottom:20px">Available Courses</div>
+    <div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:0.5px solid var(--color-border-tertiary)">
+        <div>
+          <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px">Frontend Mastery</div>
+          <div class="bar" style="width:180px;height:8px"></div>
+        </div>
+        <div class="chevron"></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:0.5px solid var(--color-border-tertiary)">
+        <div>
+          <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px">Backend Architecture</div>
+          <div class="bar" style="width:200px;height:8px"></div>
+        </div>
+        <div class="chevron"></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:0.5px solid var(--color-border-tertiary)">
+        <div>
+          <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px">Fullstack Bootcamp</div>
+          <div class="bar" style="width:165px;height:8px"></div>
+        </div>
+        <div class="chevron"></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0">
+        <div>
+          <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px">Data Structures & Algorithms</div>
+          <div class="bar" style="width:190px;height:8px"></div>
+        </div>
+        <div class="chevron"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#1a1a1a;padding:14px 32px;display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:10px;color:#555">© 2025 Internify. All rights reserved.</div>
+    <div style="display:flex;gap:16px">
+      <div style="font-size:10px;color:#666">Contact Us</div>
+      <div style="font-size:10px;color:#666">Terms & Conditions</div>
+      <div style="font-size:10px;color:#666">Refund Policy</div>
+    </div>
+  </div>
+
+  <div style="background:rgba(0,0,0,0.45);min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px">
+    <div style="font-size:9px;color:#aaa;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;border:1px dashed #444;border-radius:3px;padding:2px 8px">Login modal — triggered on course click (unauthenticated)</div>
+    <div style="background:var(--color-background-primary);border-radius:var(--border-radius-lg);padding:26px 26px 22px;width:300px;border:0.5px solid var(--color-border-secondary);position:relative">
+      <div style="position:absolute;top:11px;right:14px;font-size:14px;color:var(--color-text-tertiary)">×</div>
+      <div style="font-size:15px;font-weight:500;text-align:center;color:var(--color-text-primary);margin-bottom:16px">Welcome Back</div>
+      <div style="border:1px solid var(--color-border-primary);border-radius:var(--border-radius-md);height:34px;display:flex;align-items:center;padding:0 11px;margin-bottom:9px">
+        <span style="font-size:11px;color:var(--color-text-tertiary)">Email Address</span>
+      </div>
+      <div style="border:1px solid var(--color-border-primary);border-radius:var(--border-radius-md);height:34px;display:flex;align-items:center;padding:0 11px;margin-bottom:12px">
+        <span style="font-size:11px;color:var(--color-text-tertiary)">Password</span>
+      </div>
+      <div style="background:var(--color-text-primary);color:var(--color-background-primary);border-radius:var(--border-radius-md);height:34px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;margin-bottom:11px">Login</div>
+      <div style="text-align:center;font-size:10px;color:var(--color-text-secondary)">Don't have an account? <span style="text-decoration:underline">Register here</span></div>
+    </div>
+    <div style="font-size:9px;color:#999;margin-top:10px;font-style:italic">After register → redirects back to homepage (top of page)</div>
+  </div>
+
+</div>
