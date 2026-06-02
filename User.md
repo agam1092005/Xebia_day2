@@ -147,6 +147,8 @@ During the activity, I was responsible for designing the workflow diagrams of th
 My contribution focused on designing and documenting the workflow diagrams of the Gamified Learning Platform, ensuring a logical user journey, smooth navigation, and effective interaction between learning and gamification features.
 # Contributor Details
 
+# Contributor Details
+
 ## Name
 
 Agampreet Singh
@@ -159,7 +161,7 @@ Agampreet Singh
 
 # Contribution Summary
 
-During the activity, I was responsible for creating the wireframes of the Gamified Learning Platform.
+During the activity, I was responsible for defining the user roles and key features of the Gamified Learning Platform.
 
 ---
 
@@ -167,56 +169,63 @@ During the activity, I was responsible for creating the wireframes of the Gamifi
 
 ## 🔹 Technical Contributions
 
-* Designed low-fidelity wireframes for the Gamified Learning Platform.
-* Planned the overall user interface structure and screen layouts.
-* Created wireframes for:
+* Defined the primary user roles of the Gamified Learning Platform.
+* Identified user responsibilities, objectives, and interactions within the system.
+* Designed and documented the following user roles:
 
-  * Landing Page
-  * Login and Registration Page
-  * Student Dashboard
-  * Course Listing Page
-  * Course Details Page
-  * Quiz Interface
-  * Achievement & Badge Page
-  * Leaderboard Screen
-  * User Profile Page
-  * Admin Dashboard
-* Structured navigation between screens to ensure usability and consistency.
-* Planned layout placement for gamification elements such as XP points, badges, progress indicators, and rankings.
-* Contributed to user experience design and interface organization.
-* Assisted in feature visualization and screen planning.
+  * Learner (Student)
+  * Administrator
+* Analyzed user requirements to ensure platform features align with learning goals and engagement objectives.
+* Defined key features for learners, including:
+
+  * User Registration and Login
+  * Course Enrollment
+  * Learning Progress Tracking
+  * Quiz Participation
+  * XP Points System
+  * Achievement Badges
+  * Leaderboards
+  * User Dashboard
+* Defined key features for administrators, including:
+
+  * Course Management
+  * Lesson Management
+  * Quiz Management
+  * User Monitoring
+* Created a structured role-feature mapping to define feature accessibility and user permissions.
+* Contributed to functional documentation and feature planning discussions.
 
 ---
 
 ## 🔹 Non-Technical Contributions
 
-* Participated in design discussions and documentation activities.
-* Supported feature planning and usability reviews.
+* Assisted in requirement gathering and project planning.
+* Participated in documentation and feature organization activities.
 
 ---
 
 # 🔹 Distributed Tasks
 
-* Wireframe Design
-* UI Structure Planning
-* Screen Layout Design
-* User Experience Planning
-* Navigation Design
-* Dashboard Layout Planning
-* Feature Visualization
-* Documentation Support
+* User Role Definition
+* Feature Requirement Analysis
+* Role-Based Access Planning
+* Feature Documentation
+* User Interaction Mapping
+* Requirement Structuring
+* Functional Documentation
+* Project Documentation Support
 
 ---
 
 # 🔹 Value Added
 
-* Helped create a user-friendly and visually organized interface structure.
-* Ensured intuitive navigation across platform modules.
-* Improved usability through structured screen layouts.
-* Contributed to establishing a scalable UI foundation for future development.
+* Helped establish a clear role-based system structure.
+* Ensured features were aligned with user needs and platform objectives.
+* Contributed to creating an organized and scalable feature framework.
+* Improved clarity in user responsibilities and system interactions.
 
 ---
 
 # Summary
 
-My contribution focused on designing wireframes for the Gamified Learning Platform, creating structured screen layouts, planning navigation flows, and ensuring an intuitive user experience that supports both learning and gamification objectives.
+My contribution focused on defining the user roles and key features of the Gamified Learning Platform. I identified the primary platform users, documented their responsibilities and permissions, and defined the essential features required to create an engaging and effective learning experience.
